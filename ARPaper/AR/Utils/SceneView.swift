@@ -9,7 +9,6 @@ import ARKit
 
 extension ARSCNView
 {
-    
     /**
      Returns a display transform layer provided viewport size and Screen orientation.
      

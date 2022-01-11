@@ -99,10 +99,10 @@ class Vision
 
 protocol VisionDelegate
 {
-    ///Called when rectangle recognized.
+    /// Called when rectangle recognized.
     func onDetected(rectangle: VNRectangleObservation)
     
-    ///Called when all rectangles had disapeard.
+    /// Called when all rectangles had disapeard.
     func onLost()
     func scene() -> ARSCNView
 }

@@ -18,11 +18,13 @@ class Rectangle
 
     public var rectangleView: RectangleView
     public var node = SCNNode()
-    
-    ///Real Size of the Rectangle in Centimeters.
-    public var realSize = CGSize(width: 0, height: 0){
-        didSet {
-            updateRealSizeText()
+
+    /// Real Size of the Rectangle in Centimeters.
+    public var realSize = CGSize(width: 0, height: 0)
+    {
+        didSet
+        {
+            self.updateRealSizeText()
         }
     }
 
@@ -32,14 +34,14 @@ class Rectangle
         self.points = points
         self.set(points: points)
     }
-    
+
     func removeFromSuperview()
     {
         self.rectangleView.removeFromSuperview()
-        node.removeFromParentNode()
+        self.node.removeFromParentNode()
     }
-    
-    ///Visualisation for Corner.
+
+    /// Visualisation for Corner.
     func pointNode(position: SCNVector3) -> SCNNode
     {
         let sphere = SCNSphere(radius: 0.005)
@@ -49,10 +51,10 @@ class Rectangle
         self.node.addChildNode(newNode)
         return newNode
     }
-    
+
     func updateRealSizeText()
     {
-        //Not supposed to be here. - let's use Combine in the future.
+        // Not supposed to be here. - let's use Combine in the future.
         self.rectangleView.label.text = "\(self.realSize.width) CM x \(self.realSize.height) CM"
     }
 }
@@ -94,7 +96,7 @@ extension Rectangle
 
 extension Rectangle
 {
-    ///Calculates real size.
+    /// Calculates real size.
     func calculateRealSize()
     {
         /*

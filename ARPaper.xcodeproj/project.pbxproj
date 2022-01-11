@@ -11,7 +11,6 @@
 		D18859FC278D14DE0087C510 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18859FB278D14DE0087C510 /* SceneDelegate.swift */; };
 		D18859FE278D14DE0087C510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18859FD278D14DE0087C510 /* ViewController.swift */; };
 		D1885A01278D14DE0087C510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18859FF278D14DE0087C510 /* Main.storyboard */; };
-		D1885A04278D14DE0087C510 /* ARPaper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1885A02278D14DE0087C510 /* ARPaper.xcdatamodeld */; };
 		D1885A06278D14E00087C510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1885A05278D14E00087C510 /* Assets.xcassets */; };
 		D1885A09278D14E00087C510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1885A07278D14E00087C510 /* LaunchScreen.storyboard */; };
 		D1885A14278D14E10087C510 /* ARPaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A13278D14E10087C510 /* ARPaperTests.swift */; };
@@ -49,7 +48,6 @@
 		D18859FB278D14DE0087C510 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D18859FD278D14DE0087C510 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1885A00278D14DE0087C510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D1885A03278D14DE0087C510 /* ARPaper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ARPaper.xcdatamodel; sourceTree = "<group>"; };
 		D1885A05278D14E00087C510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1885A08278D14E00087C510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1885A0A278D14E00087C510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,16 +113,14 @@
 		D18859F8278D14DE0087C510 /* ARPaper */ = {
 			isa = PBXGroup;
 			children = (
+				D1885A49278E4C770087C510 /* ViewController */,
 				D1885A2C278D19C60087C510 /* AR */,
-				D1885A33278D232A0087C510 /* Utils */,
 				D18859F9278D14DE0087C510 /* AppDelegate.swift */,
 				D18859FB278D14DE0087C510 /* SceneDelegate.swift */,
-				D18859FD278D14DE0087C510 /* ViewController.swift */,
 				D18859FF278D14DE0087C510 /* Main.storyboard */,
 				D1885A05278D14E00087C510 /* Assets.xcassets */,
 				D1885A07278D14E00087C510 /* LaunchScreen.storyboard */,
 				D1885A0A278D14E00087C510 /* Info.plist */,
-				D1885A02278D14DE0087C510 /* ARPaper.xcdatamodeld */,
 			);
 			path = ARPaper;
 			sourceTree = "<group>";
@@ -149,9 +145,10 @@
 		D1885A2C278D19C60087C510 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				D1885A33278D232A0087C510 /* Utils */,
 				D1885A40278E29280087C510 /* Rectangle */,
-				D1885A2D278D19D40087C510 /* ViewController+AR.swift */,
 				D1885A2F278D1AD30087C510 /* Vision.swift */,
+				D1885A2D278D19D40087C510 /* ViewController+AR.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -170,9 +167,17 @@
 			children = (
 				D1885A3C278E195B0087C510 /* Rectangle.swift */,
 				D1885A36278D265D0087C510 /* RectangleView.swift */,
-				D1885A43278E3BD60087C510 /* ViewController+Screenshot.swift */,
 			);
 			path = Rectangle;
+			sourceTree = "<group>";
+		};
+		D1885A49278E4C770087C510 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D18859FD278D14DE0087C510 /* ViewController.swift */,
+				D1885A43278E3BD60087C510 /* ViewController+Screenshot.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,7 +317,6 @@
 				D1885A3D278E195B0087C510 /* Rectangle.swift in Sources */,
 				D1885A35278D23490087C510 /* SceneView.swift in Sources */,
 				D1885A30278D1AD40087C510 /* Vision.swift in Sources */,
-				D1885A04278D14DE0087C510 /* ARPaper.xcdatamodeld in Sources */,
 				D1885A37278D265D0087C510 /* RectangleView.swift in Sources */,
 				D1885A3F278E25E90087C510 /* Vector3.swift in Sources */,
 				D1885A2E278D19D40087C510 /* ViewController+AR.swift in Sources */,
@@ -664,19 +668,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D1885A02278D14DE0087C510 /* ARPaper.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D1885A03278D14DE0087C510 /* ARPaper.xcdatamodel */,
-			);
-			currentVersion = D1885A03278D14DE0087C510 /* ARPaper.xcdatamodel */;
-			path = ARPaper.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D18859EE278D14DE0087C510 /* Project object */;
 }

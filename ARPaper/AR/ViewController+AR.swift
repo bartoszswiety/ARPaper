@@ -40,16 +40,15 @@ extension ViewController {
             }
         }
         
-        
         // We analyzed all positions - let's put it back.
         return positions
     }
 }
 
 extension ViewController: VisionDelegate {
+    
+    ///When Rectangle Detected
     func onDetected(rectangle: VNRectangleObservation) {
-        
-        
         DispatchQueue.main.async {
             /// Vector Transfromations from Camera buffer to view.
             let displayTransformation = self.sceneView.displayTransform()

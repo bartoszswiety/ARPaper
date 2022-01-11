@@ -25,7 +25,7 @@ class RectangleView: CAShapeLayer
         self.strokeColor = UIColor.red.cgColor
         self.fillColor = UIColor.red.cgColor
         self.opacity = 0.5
-        addSublayer(label.layer)
+        addSublayer(self.label.layer)
     }
     
     @available(*, unavailable)
