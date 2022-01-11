@@ -20,7 +20,7 @@ class Vision
     
     init()
     {
-        self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [weak self] _ in
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true, block: { [weak self] _ in
                 self?.update()
         })
     }
