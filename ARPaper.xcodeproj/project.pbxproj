@@ -19,6 +19,8 @@
 		D1885A20278D14E10087C510 /* ARPaperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A1F278D14E10087C510 /* ARPaperUITestsLaunchTests.swift */; };
 		D1885A2E278D19D40087C510 /* ViewController+AR.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A2D278D19D40087C510 /* ViewController+AR.swift */; };
 		D1885A30278D1AD40087C510 /* Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A2F278D1AD30087C510 /* Vision.swift */; };
+		D1885A35278D23490087C510 /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A34278D23490087C510 /* SceneView.swift */; };
+		D1885A37278D265D0087C510 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A36278D265D0087C510 /* RectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		D1885A1F278D14E10087C510 /* ARPaperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPaperUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D1885A2D278D19D40087C510 /* ViewController+AR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+AR.swift"; sourceTree = "<group>"; };
 		D1885A2F278D1AD30087C510 /* Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
+		D1885A34278D23490087C510 /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		D1885A36278D265D0087C510 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				D1885A2C278D19C60087C510 /* AR */,
+				D1885A33278D232A0087C510 /* Utils */,
 				D18859F9278D14DE0087C510 /* AppDelegate.swift */,
 				D18859FB278D14DE0087C510 /* SceneDelegate.swift */,
 				D18859FD278D14DE0087C510 /* ViewController.swift */,
@@ -114,6 +119,7 @@
 				D1885A07278D14E00087C510 /* LaunchScreen.storyboard */,
 				D1885A0A278D14E00087C510 /* Info.plist */,
 				D1885A02278D14DE0087C510 /* ARPaper.xcdatamodeld */,
+				D1885A36278D265D0087C510 /* RectangleView.swift */,
 			);
 			path = ARPaper;
 			sourceTree = "<group>";
@@ -142,6 +148,14 @@
 				D1885A2F278D1AD30087C510 /* Vision.swift */,
 			);
 			path = AR;
+			sourceTree = "<group>";
+		};
+		D1885A33278D232A0087C510 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D1885A34278D23490087C510 /* SceneView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,8 +292,10 @@
 				D18859FE278D14DE0087C510 /* ViewController.swift in Sources */,
 				D18859FA278D14DE0087C510 /* AppDelegate.swift in Sources */,
 				D18859FC278D14DE0087C510 /* SceneDelegate.swift in Sources */,
+				D1885A35278D23490087C510 /* SceneView.swift in Sources */,
 				D1885A30278D1AD40087C510 /* Vision.swift in Sources */,
 				D1885A04278D14DE0087C510 /* ARPaper.xcdatamodeld in Sources */,
+				D1885A37278D265D0087C510 /* RectangleView.swift in Sources */,
 				D1885A2E278D19D40087C510 /* ViewController+AR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

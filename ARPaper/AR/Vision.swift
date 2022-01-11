@@ -45,7 +45,7 @@ class Vision
         {
             processing = true
             
-            let handler = VNImageRequestHandler(cvPixelBuffer: image, orientation: .up)
+            let handler = VNImageRequestHandler(cvPixelBuffer: image, orientation: .downMirrored)
             
             let request = VNDetectRectanglesRequest
             { request, error in
