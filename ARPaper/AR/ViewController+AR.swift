@@ -40,7 +40,7 @@ extension ViewController {
             }
         }
         
-        print("Positions Calculated")
+        
         // We analyzed all positions - let's put it back.
         return positions
     }
@@ -48,7 +48,7 @@ extension ViewController {
 
 extension ViewController: VisionDelegate {
     func onDetected(rectangle: VNRectangleObservation) {
-        print("Rectangle Detected")
+        
         
         DispatchQueue.main.async {
             /// Vector Transfromations from Camera buffer to view.

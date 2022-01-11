@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         initAR()
     }
 
+    @IBAction func TakePhoto(_ sender: Any) {
+        takeShot()
+    }
+    
     /// Visualizes Rectangle in Scene View Layer
     public func drawRectangle(points: [CGPoint]) {
         if let rectangle = rectangle {
@@ -29,16 +33,14 @@ class ViewController: UIViewController {
             }
         } else {
             rectangle = Rectangle(points: points)
-            sceneView.layer.addSublayer(rectangle!.rectangleView.shape)
-            sceneView.layer.addSublayer(rectangle!.rectangleView.label.layer)
+            sceneView.layer.addSublayer(rectangle!.rectangleView)
             sceneView.scene.rootNode.addChildNode(rectangle!.node)
         }
     }
      
-    public func clearRectangle()
-    {
+    public func clearRectangle() {
         if let rectangle = rectangle {
-            self.rectangle = nil;
+            self.rectangle = nil
             rectangle.removeFromSuperview()
         }
     }

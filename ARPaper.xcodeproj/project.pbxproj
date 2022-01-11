@@ -23,6 +23,7 @@
 		D1885A37278D265D0087C510 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A36278D265D0087C510 /* RectangleView.swift */; };
 		D1885A3D278E195B0087C510 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A3C278E195B0087C510 /* Rectangle.swift */; };
 		D1885A3F278E25E90087C510 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A3E278E25E90087C510 /* Vector3.swift */; };
+		D1885A44278E3BD60087C510 /* ViewController+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A43278E3BD60087C510 /* ViewController+Screenshot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D1885A36278D265D0087C510 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 		D1885A3C278E195B0087C510 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		D1885A3E278E25E90087C510 /* Vector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		D1885A43278E3BD60087C510 /* ViewController+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Screenshot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				D1885A3C278E195B0087C510 /* Rectangle.swift */,
 				D1885A36278D265D0087C510 /* RectangleView.swift */,
+				D1885A43278E3BD60087C510 /* ViewController+Screenshot.swift */,
 			);
 			path = Rectangle;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				D1885A37278D265D0087C510 /* RectangleView.swift in Sources */,
 				D1885A3F278E25E90087C510 /* Vector3.swift in Sources */,
 				D1885A2E278D19D40087C510 /* ViewController+AR.swift in Sources */,
+				D1885A44278E3BD60087C510 /* ViewController+Screenshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +499,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARPaper/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "AR Testing";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Screenshot Saving";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -524,6 +529,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARPaper/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "AR Testing";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Screenshot Saving";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -9,10 +9,15 @@ import Foundation
 import UIKit
 
 //
-class RectangleShape: CAShapeLayer
+class RectangleView: CAShapeLayer
 {
+    let label: UILabel
+    
     init(points: [CGPoint])
     {
+        self.label = UILabel()
+        self.label.textColor = .blue
+        
         super.init()
         self.set(points: points)
         
@@ -20,12 +25,19 @@ class RectangleShape: CAShapeLayer
         self.strokeColor = UIColor.red.cgColor
         self.fillColor = UIColor.red.cgColor
         self.opacity = 0.5
+        addSublayer(label.layer)
     }
     
     @available(*, unavailable)
     required init?(coder: NSCoder)
     {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func removeFromSuperview()
+    {
+        self.removeFromSuperlayer()
+        self.label.removeFromSuperview()
     }
     
     /// Calculates Bezier Curve with points.
@@ -39,39 +51,9 @@ class RectangleShape: CAShapeLayer
             bezierPath.close()
             
             self.path = bezierPath.cgPath
+            
+            self.label.frame = CGRect(x: points[3].x, y: points[2].y, width: 200, height: 100)
+            self.label.textAlignment = .center
         }
-    }
-}
-
-/// 2D Visulasization of Points with Label
-class RectangleView
-{
-    let shape: RectangleShape
-    let label: UILabel
-    
-    init(points: [CGPoint])
-    {
-        self.shape = RectangleShape(points: points)
-        
-        self.label = UILabel(frame: CGRect())
-        self.label.textColor = .blue
-        self.label.text = ""
-    }
-
-    public func removeFromSuperview()
-    {
-        self.shape.removeFromSuperlayer()
-        self.label.removeFromSuperview()
-    }
-    
-    // Updates Curve points.
-    public func set(points: [CGPoint])
-    {
-        // Curve
-        self.shape.set(points: points)
-        
-        // Label
-        self.label.frame = CGRect(x: points[3].x, y: points[2].y, width: 200, height: 100)
-        self.label.textAlignment = .center
     }
 }
