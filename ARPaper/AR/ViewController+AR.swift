@@ -15,6 +15,21 @@ extension ViewController {
         sceneView.scene = SCNScene()
         self.vision.delegate = self
     }
+    
+    func analyze3DCorodinates(points: [CGPoint]) -> [SCNVector3]?
+    {
+        for point in points
+        {
+            //Make raycast query for 2D CGPoint
+            let query = sceneView.raycastQuery(from: point, allowing: .existingPlaneGeometry, alignment: .any)
+            
+            if let validQuery: ARRaycastQuery = query {
+            }
+        }
+        
+        
+        return nil;
+    }
 }
 
 extension ViewController: VisionDelegate {
