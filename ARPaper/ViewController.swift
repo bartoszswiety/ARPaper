@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import ARKit
+import SceneKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var sceneView: ARSCNView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        initAR()
     }
-
-
 }
+
 
