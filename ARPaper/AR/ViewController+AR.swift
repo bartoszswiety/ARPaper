@@ -61,6 +61,12 @@ extension ViewController: VisionDelegate {
             self.drawRectangle(points: bounds)
         }
     }
+
+    func onLost() {
+        DispatchQueue.main.async {
+            self.clearRectangle()
+        }
+    }
     
     func scene() -> ARSCNView {
         return self.sceneView

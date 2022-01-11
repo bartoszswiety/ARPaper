@@ -11,6 +11,7 @@ import Foundation
 import SceneKit
 import Vision
 
+/// Rectangle Detector from Camera Buffer
 class Vision
 {
     private var timer: Timer?
@@ -21,7 +22,7 @@ class Vision
     init()
     {
         self.timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true, block: { [weak self] _ in
-                self?.update()
+            self?.update()
         })
     }
     
@@ -54,7 +55,7 @@ class Vision
                 else
                 {
                     print("Error: \(error)")
-                    self.processing = false;
+                    self.processing = false
                     return
                 }
                 self.onVision(request: request)
@@ -65,12 +66,17 @@ class Vision
             request.minimumConfidence = 0.90
             request.usesCPUOnly = false
             
-            DispatchQueue.global().async {
-                do {
+            DispatchQueue.global().async
+            {
+                do
+                {
                     try handler.perform([request])
-                } catch {
+                }
+                catch
+                {
                     print("Error: request failed.")
-                    self.processing = false;
+                    self.processing = false
+                    self.delegate?.onLost()
                 }
             }
         }
@@ -83,12 +89,20 @@ class Vision
             print("On Rectangle Detected")
             delegate?.onDetected(rectangle: rectangle)
         }
-        self.processing = false
+        else
+        {
+            delegate?.onLost()
+        }
+        processing = false
     }
 }
 
 protocol VisionDelegate
 {
-    func onDetected(rectangle:VNRectangleObservation)
+    ///Called when rectangle recognized.
+    func onDetected(rectangle: VNRectangleObservation)
+    
+    ///Called when all rectangles had disapeard.
+    func onLost()
     func scene() -> ARSCNView
 }
