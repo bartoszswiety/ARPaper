@@ -28,7 +28,7 @@ class Rectangle
     
     func pointNode(position: SCNVector3) -> SCNNode
     {
-        let sphere = SCNSphere(radius: 0.02)
+        let sphere = SCNSphere(radius: 0.005)
         sphere.firstMaterial!.diffuse.contents = UIColor.green
         let newNode = SCNNode(geometry: sphere)
         

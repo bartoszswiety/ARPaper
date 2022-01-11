@@ -21,6 +21,7 @@
 		D1885A30278D1AD40087C510 /* Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A2F278D1AD30087C510 /* Vision.swift */; };
 		D1885A35278D23490087C510 /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A34278D23490087C510 /* SceneView.swift */; };
 		D1885A37278D265D0087C510 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A36278D265D0087C510 /* RectangleView.swift */; };
+		D1885A3D278E195B0087C510 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A3C278E195B0087C510 /* Rectangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D1885A2F278D1AD30087C510 /* Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
 		D1885A34278D23490087C510 /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
 		D1885A36278D265D0087C510 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
+		D1885A3C278E195B0087C510 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				D1885A2D278D19D40087C510 /* ViewController+AR.swift */,
 				D1885A2F278D1AD30087C510 /* Vision.swift */,
+				D1885A3C278E195B0087C510 /* Rectangle.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				D18859FE278D14DE0087C510 /* ViewController.swift in Sources */,
 				D18859FA278D14DE0087C510 /* AppDelegate.swift in Sources */,
 				D18859FC278D14DE0087C510 /* SceneDelegate.swift in Sources */,
+				D1885A3D278E195B0087C510 /* Rectangle.swift in Sources */,
 				D1885A35278D23490087C510 /* SceneView.swift in Sources */,
 				D1885A30278D1AD40087C510 /* Vision.swift in Sources */,
 				D1885A04278D14DE0087C510 /* ARPaper.xcdatamodeld in Sources */,

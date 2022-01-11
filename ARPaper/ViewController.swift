@@ -12,8 +12,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     public var vision = Vision()
-    private var rectangle: RectangleView?
-
+    public var rectangle: Rectangle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initAR()
@@ -21,16 +21,54 @@ class ViewController: UIViewController {
 
     /// Visualizes Rectangle in Scene View Layer
     public func drawRectangle(points: [CGPoint]) {
-        CATransaction.begin()
-        print("Draw")
         if let rectangle = rectangle {
             rectangle.set(points: points)
+            
+            if let vector = analyze3DCorodinates(points: points) {
+                rectangle.set(positions: vector)
+            }
+        } else {
+            rectangle = Rectangle(points: points)
+            sceneView.layer.addSublayer(rectangle!.rectangleView)
+            sceneView.scene.rootNode.addChildNode(rectangle!.node)
         }
-        else {
-            self.rectangle = RectangleView(points: points)
+        
+//        drawSphere(points: points)
+    }
+    
+    public func drawSphere(points: [CGPoint]) {
+        print("Raycast Hit")
+        let x = sceneView.raycastQuery(from: points[0], allowing: .existingPlaneGeometry, alignment: .any)
+        
+        if let nonOptQuery: ARRaycastQuery = x {
+            let result: [ARRaycastResult] = sceneView.session.raycast(nonOptQuery)
+            
+            print("Jest coś?")
+            guard let rayCast: ARRaycastResult = result.first
+            else { return }
 
-            self.sceneView.layer.addSublayer(rectangle!)
+            print("Mamy Podłoże.")
+            
+//            let anchor = hit.anchor
+//            let pos = hit.worldVector
+            
+            let world = SCNNode()
+            
+            let sphere = SCNSphere(radius: 0.01)
+            sphere.firstMaterial!.diffuse.contents = UIColor.green
+            
+            let node = SCNNode(geometry: sphere)
+            node.position = SCNVector3(rayCast.worldTransform.columns.3.x,
+                                       rayCast.worldTransform.columns.3.y,
+                                       rayCast.worldTransform.columns.3.z)
+            
+            world.addChildNode(node)
+            
+            sceneView.scene.rootNode.addChildNode(world)
+            
+            print("Surface baby")
+        } else {
+            print("No surface?")
         }
-        CATransaction.commit()
     }
 }

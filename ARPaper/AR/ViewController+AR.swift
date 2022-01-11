@@ -16,19 +16,33 @@ extension ViewController {
         self.vision.delegate = self
     }
     
-    func analyze3DCorodinates(points: [CGPoint]) -> [SCNVector3]?
-    {
-        for point in points
-        {
-            //Make raycast query for 2D CGPoint
+    func analyze3DCorodinates(points: [CGPoint]) -> [SCNVector3]? {
+        var positions: [SCNVector3] = []
+        
+        for point in points {
+            // Make raycast query for 2D CGPoint
             let query = sceneView.raycastQuery(from: point, allowing: .existingPlaneGeometry, alignment: .any)
             
             if let validQuery: ARRaycastQuery = query {
+                let result: [ARRaycastResult] = sceneView.session.raycast(validQuery)
+                
+                // Check if we have any hits.
+                guard let rayCast: ARRaycastResult = result.first
+                else {
+                    // Nothig?
+                    return nil
+                }
+
+                // Transponse Raycast worldMatrix to Vector3.
+                positions.append(SCNVector3(rayCast.worldTransform.columns.3.x,
+                                            rayCast.worldTransform.columns.3.y,
+                                            rayCast.worldTransform.columns.3.z))
             }
         }
         
-        
-        return nil;
+        print("Positions Calculated")
+        // We analyzed all positions - let's put it back.
+        return positions
     }
 }
 
