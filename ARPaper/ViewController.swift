@@ -11,10 +11,12 @@ import SceneKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
+    private var vision:Vision = Vision();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initAR()
+        vision.delegate = self;
     }
 }
 

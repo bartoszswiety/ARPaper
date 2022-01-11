@@ -18,6 +18,7 @@
 		D1885A1E278D14E10087C510 /* ARPaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A1D278D14E10087C510 /* ARPaperUITests.swift */; };
 		D1885A20278D14E10087C510 /* ARPaperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A1F278D14E10087C510 /* ARPaperUITestsLaunchTests.swift */; };
 		D1885A2E278D19D40087C510 /* ViewController+AR.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A2D278D19D40087C510 /* ViewController+AR.swift */; };
+		D1885A30278D1AD40087C510 /* Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1885A2F278D1AD30087C510 /* Vision.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D1885A1D278D14E10087C510 /* ARPaperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPaperUITests.swift; sourceTree = "<group>"; };
 		D1885A1F278D14E10087C510 /* ARPaperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPaperUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D1885A2D278D19D40087C510 /* ViewController+AR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+AR.swift"; sourceTree = "<group>"; };
+		D1885A2F278D1AD30087C510 /* Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				D1885A2D278D19D40087C510 /* ViewController+AR.swift */,
+				D1885A2F278D1AD30087C510 /* Vision.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				D18859FE278D14DE0087C510 /* ViewController.swift in Sources */,
 				D18859FA278D14DE0087C510 /* AppDelegate.swift in Sources */,
 				D18859FC278D14DE0087C510 /* SceneDelegate.swift in Sources */,
+				D1885A30278D1AD40087C510 /* Vision.swift in Sources */,
 				D1885A04278D14DE0087C510 /* ARPaper.xcdatamodeld in Sources */,
 				D1885A2E278D19D40087C510 /* ViewController+AR.swift in Sources */,
 			);

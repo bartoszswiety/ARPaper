@@ -17,4 +17,13 @@ extension ViewController
     }
 }
 
-
+extension ViewController:VisionDelegate
+{
+    func onDetected(rectangle: VNRectangleObservation) {
+      
+    }
+    
+    func scene() -> ARSCNView {
+        return self.sceneView
+    }
+}
